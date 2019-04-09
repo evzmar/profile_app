@@ -11,7 +11,9 @@ const  AuthPageContainer = (props) => {
 //---
 const mapStateToProps = (state) => {
     return {
-     isNotNullToken:  state.auth.userAuthData.token !== null
+     isNotNullToken:    state.auth.userAuthData.token !== null,
+     authProcessStatus: state.auth.authProcessStatus,
+     authProcessError:  state.auth.authProcessError
     }
 };
 
@@ -20,7 +22,6 @@ const mapDispatchToProps = (dispatch) => {
         onAuthorizationDataEnteringFinishCommited: (authData) => {
             const authUserAccountData = authData;
             dispatch(authorizeUser(authUserAccountData));
-            dispatch()
         }
     }
 

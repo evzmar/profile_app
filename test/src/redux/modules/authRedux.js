@@ -5,7 +5,7 @@ import {
     registerProcessResults,
     registerProcessStatuses
 } from "../../consts/consts";
-import {actions as actionsProfile, actions as actionProfile} from "./profileRedux";
+
 
 export const types = {
     SET_TOKEN:                             'APP/AUTH_REDUX/SET_TOKEN',
@@ -23,8 +23,8 @@ const initialState = {
         userAccountName: '',
         userPassword: ''
     },
-    authStatus: authProcessStatuses.READY,
-    authError:  authProcessResults.SUCCESS
+    authProcessStatus: authProcessStatuses.READY,
+    authProcessError:  authProcessResults.SUCCESS
 };
 //---- actionCreators--------//
 export const actions = {
@@ -32,8 +32,8 @@ export const actions = {
     setUserAccountName:           (userAccountName)     => ({type: types.SET_USER_ACCOUNT_NAME, userAccountName}),
     setUserPassword:              (userPassword)        => ({type: types.SET_USER_PASSWORD, userPassword}),
 
-    setAuthProcessStatus:         (authStatus)          => ({type: types.SET_AUTH_PROCESS_STATUS, authStatus}),
-    setAuthProcessError:          (authError)           => ({type: types.SET_AUTH_PROCESS_ERROR, authError})
+    setAuthProcessStatus:         (authProcessStatus)    => ({type: types.SET_AUTH_PROCESS_STATUS, authProcessStatus}),
+    setAuthProcessError:          (authProcessError)     => ({type: types.SET_AUTH_PROCESS_ERROR,  authProcessError})
 };
 
 //----
@@ -69,13 +69,13 @@ export const reducer = (state = initialState, action) => {
         case types.SET_AUTH_PROCESS_STATUS:
             return {
                 ...state,
-                authStatus: action.authStatus
+                authProcessStatus: action.authProcessStatus
             };
 
         case types.SET_AUTH_PROCESS_ERROR:
             return {
                 ...state,
-                authError: action.authError
+                authProcessError: action.authProcessError
             };
 
         default:
@@ -89,28 +89,37 @@ export const authorizeUser = (authData, onSuccessfulAuthorizationFinalized) => (
     let accountName = authData.accountName;
     let password = authData.password;
 
+    dispatch(actions.setAuthProcessStatus(authProcessStatuses.IN_PROGRESS));
 
     axios.post('/api/v1/users/'+ accountName + '/auth-tokens', {
         pass:  password
     })
         .then((res) => {
             if (res.status === 201) {
-                dispatch(actions.setAuthProcessStatus(registerProcessStatuses.READY));
-                dispatch(actions.setAuthProcessError(registerProcessResults.SUCCESS));
                 dispatch(actions.setToken(res.data.tokenValue));
                 dispatch(actions.setUserAccountName(accountName));
                 dispatch(actions.setUserPassword(password));
+
+                dispatch(actions.setAuthProcessStatus(authProcessStatuses.READY));
+                dispatch(actions.setAuthProcessError(authProcessResults.SUCCESS));
 
                 if(onSuccessfulAuthorizationFinalized){
                     onSuccessfulAuthorizationFinalized();
                 };
 
             } else if (res.status === 400){
-                dispatch(actions.setRegisterProcessStatus(registerProcessStatuses.READY));
-                dispatch(actions.setRegisterProcessError(registerProcessResults.COMMON_ERROR))
+                dispatch(actions.setToken(null));
+
+                dispatch(actions.setAuthProcessStatus(authProcessStatuses.READY));
+                dispatch(actions.setAuthProcessError(authProcessResults.COMMON_ERROR));
+
             }
-        }).catch((e) => {
-        console.log(e);
+            else{
+                console.log('http error status:', res.status);
+            };
+        })
+        .catch((e) => {
+            console.log(e);
     })
 
 };

@@ -1,9 +1,7 @@
 import React from 'react';
 import style from "../components/AuthPage/AuthPage.module.css";
-
 import Field from "redux-form/es/Field";
 import connect from "react-redux/es/connect/connect";
-import {authorizeUser} from "../redux/modules/authRedux";
 import {reduxForm} from "redux-form";
 
 

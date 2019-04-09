@@ -1,6 +1,7 @@
 import React from 'react';
 import style from "./RegisterPage.module.css";
 import Redirect from "react-router-dom/es/Redirect";
+import Field from "redux-form/es/Field";
 
 
 
@@ -43,6 +44,7 @@ const RegisterPage = (props) => {
                 Password
              </label>
              <input className={style.formTextInput}
+                    type="password"
                     placeholder="Password"
                     value={props.enteringData.userPassword}
                     onChange={
@@ -57,6 +59,7 @@ const RegisterPage = (props) => {
              </label>
              <div className={style.userPasswordBlock}>
                  <input className={style.formTextInput}
+                        type="password"
                         placeholder="Repeated password"
                         value={props.enteringData.repeatedUserPassword}
                         onChange={

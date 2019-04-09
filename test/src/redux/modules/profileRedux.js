@@ -1,43 +1,40 @@
 import axios from "../../dal/axios-instance";
+import {
+    profileProcessResults,
+    profileProcessStatuses
+} from "../../consts/consts";
+
 
 export const types = {
-     SET_USER_PROFILE_DATA:                              'APP/PROFILE_REDUX/SET_USER_PROFILE_DATA',
+    SET_USER_PROFILE_DATA: 'APP/PROFILE_REDUX/SET_USER_PROFILE_DATA',
+    SET_EDIT_MODE:         'APP/PROFILE_REDUX/SET_EDIT_MODE',
 
-     SET_CREATING_PHONE_NUMBER:                  'APP/PROFILE_REDUX/SET_CREATING_PHONE_NUMBER',
-     SET_CREATING_ADDRESS:                       'APP/PROFILE_REDUX/SET_CREATING_ADDRESS',
-
-     COPY_FULL_NAME_TO_CREATING_FULL_NAME:       'APP/PROFILE_REDUX/COPY_FULL_NAME_TO_CREATING_FULL_NAME',
-     COPY_PHONE_NUMBER_TO_CREATING_PFONE_NUMBER: 'APP/PROFILE_REDUX/COPY_PHONE_NUMBER_TO_CREATING_PFONE_NUMBER',
-     COPY_ADDRESS_CREATING_ADDRESS:              'APP/PROFILE_REDUX/COPY_ADDRESS_CREATING_ADDRESS',
-
-    // SET_REGISTERING_PROCESS_STATUS:        'APP/REGISTER_REDUX/SET_REGISTERING_PROCESS_STATUS',
-    // SET_REGISTERING_PROCESS_ERROR:         'APP/REGISTER_REDUX/SET_REGISTERING_PROCESS_ERROR',
+    SET_UPDATE_USER_PROFILE_PROCESS_STATUS:    'APP/PROFILE_REDUX/SET_UPDATE_USER_PROFILE_PROCESS_STATUS',
+    SET_UPDATE_USER_PROFILE_PROCESS_ERROR:     'APP/PROFILE_REDUX/SET_UPDATE_USER_PROFILE_PROCESS_ERROR',
 };
 
 //----
 const initialState = {
     userProfileData: {
-        fullName:    '',
+        fullName: '',
         phoneNumber: '',
-        address:     ''
+        address: ''
     },
-    userAccountName:    null,
-    creatingPhoneNumber: null,
-    creatingAddress:     null
+    isEditMode: false,
+
+    profileStatus: profileProcessStatuses.READY,
+    profileError:  profileProcessResults.SUCCESS
 };
 
 
 //---- actionCreators--------//
-export const actions =  {
-    setUserProfileData:                   (userProfileData)    => ({type: types.SET_USER_PROFILE_DATA, userProfileData}),
-    // setEnteringUserAccountName:     (fullName)    => ({type: types.SET_CREATING_FULL_NAME, fullName}),
-    // setCreatingPhoneNumber:  (phoneNumber) => ({type: types.SET_CREATING_PHONE_NUMBER, phoneNumber}),
-    // setCreatingAddress:      (address)     => ({type: types.SET_CREATING_ADDRESS, address}),
-    //
-    // copyFullNameToCreatingFullName:       ()   => ({type: types.COPY_FULL_NAME_TO_CREATING_FULL_NAME}),
-    // copyPhoneNumberToCreatingPhoneNumber: ()   => ({type: types.COPY_PHONE_NUMBER_TO_CREATING_PFONE_NUMBER}),
-    // copyAddressToCreatingAddress:         ()   => ({type: types.COPY_ADDRESS_CREATING_ADDRESS})
- };
+export const actions = {
+    setUserProfileData: (userProfileData) => ({type: types.SET_USER_PROFILE_DATA, userProfileData}),
+    setEditMode: (editModeFlag) => ({type: types.SET_EDIT_MODE, editModeFlag}),
+
+    setUpdateUserProfileProcessStatus: (profileStatus) => ({type: types.SET_UPDATE_USER_PROFILE_PROCESS_STATUS, profileStatus}),
+    setUpdateUserProfileProcessError:  (profileError)  => ({type: types.SET_UPDATE_USER_PROFILE_PROCESS_ERROR, profileError})
+};
 
 //----
 export const reducer = (state = initialState, action) => {
@@ -53,43 +50,27 @@ export const reducer = (state = initialState, action) => {
 
         case types.SET_USER_PROFILE_DATA:
         {
-            newState.userProfileData = action.userProfileData
+            newState.userProfileData = action.userProfileData;
+            return newState
         }
-        // case types.SET_CREATING_FULL_NAME:
-        //     return {
-        //         ...state,
-        //         userAccountName: action.fullName
-        //     };
 
-        case types.SET_CREATING_PHONE_NUMBER:
-            return {
-              ...state,
-                creatingPhoneNumber: action.phoneNumber
-            };
+        case types.SET_EDIT_MODE:
+        {
+            newState.isEditMode = action.editModeFlag;
+            return newState
+        }
 
-        case types.SET_CREATING_ADDRESS:
-            return {
-              ...state,
-                creatingAddress: action.address
-            };
-        //---
-        case types.COPY_FULL_NAME_TO_CREATING_FULL_NAME:
-            return {
-              ...state,
-                userAccountName: state.userProfileData.fullName
-            };
+        case types.SET_UPDATE_USER_PROFILE_PROCESS_STATUS:
+        {
+            newState.profileStatus = action.profileStatus;
+            return newState
+        }
 
-        case types.COPY_PHONE_NUMBER_TO_CREATING_PFONE_NUMBER:
-            return {
-              ...state,
-                creatingPhoneNumber: state.userProfileData.phoneNumber
-            };
-
-        case types.COPY_ADDRESS_CREATING_ADDRESS:
-            return {
-              ...state,
-                creatingAddress: state.userProfileData.address
-            };
+        case types.SET_UPDATE_USER_PROFILE_PROCESS_ERROR:
+        {
+            newState.profileError = action.profileError;
+            return newState
+        }
 
         default:
             return state;
@@ -97,19 +78,17 @@ export const reducer = (state = initialState, action) => {
 };
 
 
-
 //--- thunkCreator -------//
 
-export const updateUserDataFromServer = () => (dispatch,getState) => {
+export const updateUserDataFromServer = () => (dispatch, getState) => {
     let globalState = getState();
     let accountName = globalState.auth.userAuthData.userAccountName;
-    axios.get('/api/v1/users/' + accountName, {
-
-    }).then((res) => {
-        if (res.status === 200){
+    axios.get('/api/v1/users/' + accountName, {}).then((res) => {
+        if (res.status === 200) {
             dispatch(actions.setUserProfileData(res.data.userData));
-        } else {
-
+        } else if(res.status === 400){
+            dispatch(actions.setUpdateUserProfileProcessStatus(profileProcessStatuses.READY));
+            dispatch(actions.setUpdateUserProfileProcessError(profileProcessResults.COMMON_ERROR))
         }
     })
 };

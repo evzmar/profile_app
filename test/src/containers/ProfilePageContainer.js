@@ -1,52 +1,38 @@
 import React from 'react';
 import ProfilePage from "../components/ProfilePage/ProfilePage";
 import connect from "react-redux/es/connect/connect";
-import {actions as actionProfile} from "../redux/modules/profileRedux";
+import {updateUserDataFromServer} from "../redux/modules/profileRedux";
+import {authorizeUser} from "../redux/modules/authRedux";
 
 
-const ProfilePageContainer = (props) => {
-    return (
-        <ProfilePage {...props} />
-    )
-};
+class ProfilePageContainer extends React.Component {
+    //---
+    componentDidMount() {
+        this.props.onDidMount();
+    }
+    //---
+    render() {
+        return (
+            <ProfilePage {...this.props} />
+        )
+    }
+}
+
+
 
 //---
 const mapStateToProps = (state) => {
-    return {
-        isAuth:               state.auth.userAuthData.token !== null,
-        userProfileData:      state.profilePage.userProfileData,
-        userAccountName:     state.profilePage.userAccountName,
-        creatingPhoneNumber:  state.profilePage.creatingPhoneNumber,
-        creatingAddress:      state.profilePage.creatingAddress
-    }
+    return {}
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onUserFullNameChangeRequest: () => {
-          dispatch(actionProfile.copyFullNameToCreatingFullName())
+        onDidMount: () => {
+            dispatch(updateUserDataFromServer())
         },
-        onUserPhoneNumberChangeRequest: () => {
-          dispatch(actionProfile.copyPhoneNumberToCreatingPhoneNumber())
-        },
-        onUserAddressChangeRequest: () => {
-            dispatch(actionProfile.copyAddressToCreatingAddress())
-        },
+        onEditingUserDataEnteringFinishCommited: (userProfileData) => {
 
-        //---
-
-        onCreatingFullNameChanged: (fullName) => {
-            dispatch(actionProfile.setCreatingFullName(fullName))
-        },
-        onCreatingPhoneNumberChanged: (phoneNumber) => {
-            dispatch(actionProfile.setCreatingPhoneNumber(phoneNumber))
-        },
-        onCreatingAddressChanged: (address) => {
-            dispatch(actionProfile.setCreatingAddress(address))
-        },
-        // onCreatingUserProfileFinishCommitted: () => {
-        //
-        // }
+        }
     }
 };
 

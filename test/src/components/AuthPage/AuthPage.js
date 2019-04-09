@@ -2,6 +2,7 @@ import React from 'react';
 import style from "./AuthPage.module.css";
 import AuthForm from "../../containers/AuthForm";
 import Redirect from "react-router-dom/es/Redirect";
+import {authProcessStatuses} from "../../consts/consts";
 
 
 
@@ -12,7 +13,7 @@ const AuthPage = (props) => {
         props.onAuthorizationDataEnteringFinishCommited(authData);
     };
     //---------------------------
-    if(props.isNotNullToken){
+    if(props.isNotNullToken && props.authProcessStatus === authProcessStatuses.READY){
         return <Redirect to='/profile'/>
     }
             //----

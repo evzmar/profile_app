@@ -8,6 +8,16 @@
     background: #f2f2f2;
 }
 
+.profileSectionLabel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Arial Narrow";
+    font-size: 3rem;
+    color: #378dcc;
+    margin-bottom: 2.5rem;
+}
+
 .formBlock{
     width: 35rem;
     height: 5rem;

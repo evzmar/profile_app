@@ -23,12 +23,12 @@ export const authProcessResults = {
 };
 
 //---
-export const updateUserDataFromServerProcessStatuses = {
+export const profileProcessStatuses = {
     READY:        'READY',       //no process
     IN_PROGRESS:  'IN_PROGRESS'
 };
 //----
-export const updateUserDataFromServerProcessResults = {
+export const profileProcessResults = {
     COMMON_ERROR:             'COMMON_ERROR',
     SUCCESS:                  'SUCCESS'
 };
