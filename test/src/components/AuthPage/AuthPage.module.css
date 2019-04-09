@@ -1,4 +1,4 @@
-.profileSection{
+.authSection{
     width: 100%;
     height: 40rem;
     display: flex;
@@ -15,6 +15,16 @@
     justify-content: space-between;
 }
 
+.authSectionLabel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Arial Narrow";
+    font-size: 3rem;
+    color: #378dcc;
+    margin-bottom: 2.5rem;
+}
+
 .formLabel{
     font-family: "Arial Narrow";
     font-size: 1.3rem;
@@ -24,19 +34,20 @@
 .formTextInput{
     width: 25rem;
     height: 2rem;
+    font-size: 1.2rem;
     color: #3f5263;
     background: #fff;
     outline: none;
     border: 0.01rem solid #e9ebed;
 }
 
-.registerButton{
+.authButton{
     display: flex;
     width: 15rem;
     height: 2rem;
     justify-content: center;
     margin: auto;
-    background: #378dcc;
+    background: #633f4f;
     border-radius: 1rem;
     font-size: 1rem;
     color: #fff!important;

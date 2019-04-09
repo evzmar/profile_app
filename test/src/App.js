@@ -1,28 +1,32 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './App.css';
-import RegisterPageComponent from "./components/registerPage/registerPage";
-import Route from "react-router-dom/es/Route";
-import LoginPageComponent from "./components/loginPage/loginPage";
-import ProfilePageComponent from "./components/profilePage/profilePage";
+import AuthPage from "./components/AuthPage/AuthPage";
+import {Route, Switch} from "react-router-dom";
+import ProfilePageContainer from "./containers/ProfilePageContainer";
+import RegisterPageContainer from "./containers/RegisterPageContainer";
+import AuthPageContainer from "./containers/AuthPageContainer";
+
 
 
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Route exact
-               path='/'
-               render={ () => <RegisterPageComponent/>}/>
-          <Route exact
-                 path='/login'
-                 render={ () => <LoginPageComponent/>}/>
-          <Route exact
-                 path='/profile'
-                 render={ () => <ProfilePageComponent/>}/>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div className="App">
+                <Switch>
+                    <Route exact
+                           path='/'
+                           render={() => <RegisterPageContainer/>}/>
+                    <Route exact
+                           path='/auth'
+                           render={() => <AuthPageContainer/>}/>
+                    <Route exact
+                           path='/profile'
+                           render={() => <ProfilePageContainer/>}/>
+                </Switch>
+            </div>
+        );
+    }
 }
 
 export default App;
