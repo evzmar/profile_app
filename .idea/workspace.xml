@@ -3,13 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ed5f8f62-86e6-492b-b5ff-9d03bb737232" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/components/RegisterPage/RegisterPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/components/RegisterPage/RegisterPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/components/RegisterPage/RegisterPage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/components/RegisterPage/RegisterPage.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/src/containers/ProfileForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/containers/ProfileForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/containers/RegisterForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/containers/RegisterForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/containers/RegisterPageContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/containers/RegisterPageContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/redux/modules/profileRedux.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/redux/modules/profileRedux.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/redux/modules/registerRedux.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/redux/modules/registerRedux.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/src/containers/ProfilePageContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/containers/ProfilePageContainer.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,15 +17,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/src/redux/modules/profileRedux.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="136" column="31" selection-start-line="136" selection-start-column="31" selection-end-line="136" selection-end-column="31" />
+            <state relative-caret-position="1411">
+              <caret line="140" column="56" selection-start-line="140" selection-start-column="56" selection-end-line="140" selection-end-column="56" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
-                <element signature="e#823#1180#0" />
-                <element signature="e#1751#3118#0" />
               </folding>
             </state>
           </provider>
@@ -39,8 +32,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/src/containers/ProfileForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="58" column="69" selection-start-line="58" selection-start-column="69" selection-end-line="58" selection-end-column="69" />
+            <state relative-caret-position="408">
+              <caret line="87" column="54" selection-start-line="87" selection-start-column="20" selection-end-line="87" selection-end-column="54" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/src/containers/ProfilePageContainer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="467">
+              <caret line="42" column="60" selection-start-line="42" selection-start-column="60" selection-end-line="42" selection-end-column="60" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -49,34 +54,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/src/containers/RegisterPageContainer.js">
+        <entry file="file://$PROJECT_DIR$/test/src/components/ProfilePage/ProfilePage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/src/redux/modules/registerRedux.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+            <state relative-caret-position="119">
+              <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
               <folding>
-                <element signature="e#0#45#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/src/redux/modules/authRedux.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1615">
-              <caret line="22" column="16" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#45#0" expanded="true" />
-                <marker date="1554880336332" expanded="true" signature="1697:1935" ph="..." />
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -133,22 +116,22 @@
         <option value="$PROJECT_DIR$/test/src/redux/modules/logoutRedux.js" />
         <option value="$PROJECT_DIR$/test/src/redux/modules/rootReducer.js" />
         <option value="$PROJECT_DIR$/test/src/redux/modules/authRedux.js" />
-        <option value="$PROJECT_DIR$/test/src/containers/ProfilePageContainer.js" />
-        <option value="$PROJECT_DIR$/test/src/components/ProfilePage/ProfilePage.js" />
         <option value="$PROJECT_DIR$/test/src/containers/AuthForm.js" />
         <option value="$PROJECT_DIR$/test/src/components/RegisterPage/RegisterPage.module.css" />
         <option value="$PROJECT_DIR$/test/src/containers/RegisterForm.js" />
         <option value="$PROJECT_DIR$/test/src/components/RegisterPage/RegisterPage.js" />
         <option value="$PROJECT_DIR$/test/src/redux/modules/registerRedux.js" />
         <option value="$PROJECT_DIR$/test/src/containers/RegisterPageContainer.js" />
-        <option value="$PROJECT_DIR$/test/src/containers/ProfileForm.js" />
         <option value="$PROJECT_DIR$/test/src/redux/modules/profileRedux.js" />
+        <option value="$PROJECT_DIR$/test/src/containers/ProfileForm.js" />
+        <option value="$PROJECT_DIR$/test/src/components/ProfilePage/ProfilePage.js" />
+        <option value="$PROJECT_DIR$/test/src/containers/ProfilePageContainer.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="578" />
-    <option name="y" value="28" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="341" />
+    <option name="y" value="15" />
     <option name="width" value="803" />
     <option name="height" value="735" />
   </component>
@@ -302,18 +285,18 @@
       <workItem from="1554624666866" duration="5718000" />
       <workItem from="1554644072307" duration="3884000" />
       <workItem from="1554651807420" duration="6510000" />
-      <workItem from="1554701498982" duration="74215000" />
+      <workItem from="1554701498982" duration="79507000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114360000" />
+    <option name="totallyTimeSpent" value="119652000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="578" y="28" width="803" height="735" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.40522876" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22916667" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -453,16 +436,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/src/containers/ProfilePageContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="25" column="63" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/src/components/ProfilePage/ProfilePage.module.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="444">
@@ -525,33 +498,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/src/containers/RegisterPageContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/src/components/ProfilePage/ProfilePage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/src/containers/ProfileForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="58" column="69" selection-start-line="58" selection-start-column="69" selection-end-line="58" selection-end-column="69" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/src/redux/modules/registerRedux.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -573,14 +519,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/containers/RegisterPageContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="21" column="57" lean-forward="true" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/components/ProfilePage/ProfilePage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/src/redux/modules/profileRedux.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="136" column="31" selection-start-line="136" selection-start-column="31" selection-end-line="136" selection-end-column="31" />
+        <state relative-caret-position="1411">
+          <caret line="140" column="56" selection-start-line="140" selection-start-column="56" selection-end-line="140" selection-end-column="56" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
-            <element signature="e#823#1180#0" />
-            <element signature="e#1751#3118#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/containers/ProfileForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="87" column="54" selection-start-line="87" selection-start-column="20" selection-end-line="87" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/containers/ProfilePageContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="42" column="60" selection-start-line="42" selection-start-column="60" selection-end-line="42" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>

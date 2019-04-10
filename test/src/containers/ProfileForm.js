@@ -8,7 +8,7 @@ import {actions as actionsProfile} from "../redux/modules/profileRedux";
 
 let ProfileForm = (props) => {
     return (
-        <form onSubmit={props.handleSubmit}>
+        <form onSubmit={props.handleSubmit} >
             <div className={style.formBlock}>
                 <label className={style.formLabel}>
                     Full name
@@ -24,7 +24,7 @@ let ProfileForm = (props) => {
                            name="fullName"
                            component='input'
                            type="text"
-                           initialValues={props.initialValues.fullName}/>
+                           />
                 }
             </div>
             <div className={style.formBlock}>
@@ -40,7 +40,7 @@ let ProfileForm = (props) => {
                            name="phoneNumber"
                            component='input'
                            type="text"
-                           initialValues={props.initialValues.phoneNumber}/>
+                          />
                 }
             </div>
             <div className={style.formBlock}>
@@ -56,7 +56,7 @@ let ProfileForm = (props) => {
                            name="address"
                            component='input'
                            type="text"
-                           initialValues={props.initialValues.address}/>
+                           />
                 }
             </div>
             {props.isNotNullToken ?
@@ -80,7 +80,6 @@ const mapStateToProps = (state) => {
         userProfileData: state.profilePage.userProfileData
     }
 };
-
 
 
 const mapDispatchToProps = (dispatch)  => {

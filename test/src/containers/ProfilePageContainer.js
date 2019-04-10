@@ -1,7 +1,11 @@
 import React from 'react';
 import ProfilePage from "../components/ProfilePage/ProfilePage";
 import connect from "react-redux/es/connect/connect";
-import {updateAuthUserProfileFromCreatingUserProfile, updateUserDataFromServer} from "../redux/modules/profileRedux";
+import {
+    actions as actionsProfile,
+    updateAuthUserProfileFromCreatingUserProfile,
+    updateUserDataFromServer
+} from "../redux/modules/profileRedux";
 import {actions as actionsAuth, authorizeUser} from "../redux/modules/authRedux";
 
 
@@ -33,7 +37,10 @@ const mapDispatchToProps = (dispatch) => {
             dispatch(updateUserDataFromServer())
         },
         onEditingUserDataEnteringFinishCommited: (userProfileData) => {
-            dispatch(updateAuthUserProfileFromCreatingUserProfile(userProfileData))
+            dispatch(updateAuthUserProfileFromCreatingUserProfile(userProfileData));
+            dispatch(actionsProfile.setEditModeFullName(false));
+            dispatch(actionsProfile.setEditModePhoneNumber(false));
+            dispatch(actionsProfile.setEditModeAddress(false))
         },
         onLogout: () => {
             dispatch(actionsAuth.clearToken());
