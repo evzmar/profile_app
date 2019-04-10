@@ -1,14 +1,15 @@
 import {combineReducers} from "redux";
-import {reducer as registerRedux} from "./registerRedux";
-import {reducer as authRedux} from "./authRedux";
+import {reducer as registerReducer} from "./registerRedux";
+import {reducer as authReducer} from "./authRedux";
 import {reducer as profilePageReducer} from "./profileRedux";
 import {reducer as formReducer} from 'redux-form';
 
 
 
+
 const  rootReducer = combineReducers({
-    register:           registerRedux,
-    auth:               authRedux,
+    register:           registerReducer,
+    auth:               authReducer,
     // loginPage:          loginPageReducer,
     profilePage:        profilePageReducer,
     form:               formReducer

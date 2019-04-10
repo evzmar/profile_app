@@ -1,8 +1,8 @@
 import React from 'react';
 import ProfilePage from "../components/ProfilePage/ProfilePage";
 import connect from "react-redux/es/connect/connect";
-import {updateUserDataFromServer} from "../redux/modules/profileRedux";
-import {authorizeUser} from "../redux/modules/authRedux";
+import {updateAuthUserProfileFromCreatingUserProfile, updateUserDataFromServer} from "../redux/modules/profileRedux";
+import {actions as actionsAuth, authorizeUser} from "../redux/modules/authRedux";
 
 
 class ProfilePageContainer extends React.Component {
@@ -22,7 +22,9 @@ class ProfilePageContainer extends React.Component {
 
 //---
 const mapStateToProps = (state) => {
-    return {}
+    return {
+        isNotNullToken:  state.auth.userAuthData.token !== null
+    }
 };
 
 const mapDispatchToProps = (dispatch) => {
@@ -31,7 +33,12 @@ const mapDispatchToProps = (dispatch) => {
             dispatch(updateUserDataFromServer())
         },
         onEditingUserDataEnteringFinishCommited: (userProfileData) => {
-
+            dispatch(updateAuthUserProfileFromCreatingUserProfile(userProfileData))
+        },
+        onLogout: () => {
+            dispatch(actionsAuth.clearToken());
+            dispatch(actionsAuth.clearUserAccountName());
+            dispatch(actionsAuth.clearUserPassword())
         }
     }
 };

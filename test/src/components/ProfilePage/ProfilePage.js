@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './ProfilePage.module.css';
-import {Redirect} from "react-router-dom";
 import ProfileForm from "../../containers/ProfileForm";
+import {Redirect} from "react-router-dom";
 
 
 
@@ -12,7 +12,9 @@ const ProfilePage = (props) => {
         props.onEditingUserDataEnteringFinishCommited(userProfileData);
     };
     //---------------------------
-
+    if ( !props.isNotNullToken){
+        return <Redirect to = '/auth'/>
+    }
     //---
 
     return (
@@ -22,7 +24,8 @@ const ProfilePage = (props) => {
             </label>
             <ProfileForm onSubmit={submit} {...props}/>
             <div className={style.logoutBlock}>
-               <button className={style.buttonLogout}>
+               <button className={style.buttonLogout}
+               onClick={(e) => props.onLogout()}>
                    logout
                </button>
             </div>

@@ -1,9 +1,7 @@
 import axios from "../../dal/axios-instance";
 import {
     authProcessResults,
-    authProcessStatuses,
-    registerProcessResults,
-    registerProcessStatuses
+    authProcessStatuses
 } from "../../consts/consts";
 
 
@@ -11,6 +9,10 @@ export const types = {
     SET_TOKEN:                             'APP/AUTH_REDUX/SET_TOKEN',
     SET_USER_ACCOUNT_NAME:                 'APP/AUTH_REDUX/SET_USER_ACCOUNT_NAME',
     SET_USER_PASSWORD:                     'APP/AUTH_REDUX/SET_USER_PASSWORD',
+
+    CLEAR_TOKEN:                           'APP/AUTH_REDUX/CLEAR_TOKEN',
+    CLEAR_USER_ACCOUNT_NAME:               'APP/AUTH_REDUX/CLEAR_USER_ACCOUNT_NAME',
+    CLEAR_USER_PASSWORD:                   'APP/AUTH_REDUX/CLEAR_USER_PASSWORD',
 
     SET_AUTH_PROCESS_STATUS:               'APP/AUTH_REDUX/SET_AUTH_PROCESS_STATUS',
     SET_AUTH_PROCESS_ERROR:                'APP/AUTH_REDUX/SET_AUTH_PROCESS_ERROR'
@@ -31,6 +33,10 @@ export const actions = {
     setToken:                     (token)               => ({type: types.SET_TOKEN, token}),
     setUserAccountName:           (userAccountName)     => ({type: types.SET_USER_ACCOUNT_NAME, userAccountName}),
     setUserPassword:              (userPassword)        => ({type: types.SET_USER_PASSWORD, userPassword}),
+
+    clearToken:                   ()                    => ({type: types.CLEAR_TOKEN}),
+    clearUserAccountName:         ()                    => ({type: types.CLEAR_USER_ACCOUNT_NAME}),
+    clearUserPassword:            ()                    => ({type: types.CLEAR_USER_PASSWORD}),
 
     setAuthProcessStatus:         (authProcessStatus)    => ({type: types.SET_AUTH_PROCESS_STATUS, authProcessStatus}),
     setAuthProcessError:          (authProcessError)     => ({type: types.SET_AUTH_PROCESS_ERROR,  authProcessError})
@@ -65,7 +71,25 @@ export const reducer = (state = initialState, action) => {
             newState.userAuthData.userPassword = action.userPassword;
             return newState
         }
+        //----
+        case types.CLEAR_TOKEN:
+        {
+            newState.userAuthData.token = null;
+            return newState
+        }
 
+        case types.CLEAR_USER_ACCOUNT_NAME:
+        {
+            newState.userAuthData.userAccountName = '';
+            return newState
+        }
+
+        case types.CLEAR_USER_PASSWORD:
+        {
+            newState.userAuthData.userPassword = '';
+            return newState
+        }
+        //----
         case types.SET_AUTH_PROCESS_STATUS:
             return {
                 ...state,

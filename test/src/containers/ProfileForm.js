@@ -13,10 +13,10 @@ let ProfileForm = (props) => {
                 <label className={style.formLabel}>
                     Full name
                 </label>
-                {props.isEditMode === false ?
+                {props.isEditMode.fullName === false ?
                     <span className={style.userInfo}
                           onClick={(e) => {
-                              props.onChangeEditMode()}
+                              props.onChangeEditModeFullName()}
                           }>
                        {props.userProfileData.fullName ? props.userProfileData.fullName : '---------'}
                     </span> :
@@ -30,9 +30,9 @@ let ProfileForm = (props) => {
                 <label className={style.formLabel}>
                     Phone number
                 </label>
-                {props.isEditMode === false ?
+                {props.isEditMode.phoneNumber === false ?
                     <span className={style.userInfo}
-                          onClick={props.isNotNullToken && props.onChangeEditMode}>
+                          onClick={props.isNotNullToken && props.onChangeEditModePhoneNumber}>
                        {props.userProfileData.phoneNumber ? props.userProfileData.phoneNumber : '---------'}
                     </span> :
                     <Field className={style.formTextInput}
@@ -45,9 +45,9 @@ let ProfileForm = (props) => {
                 <label className={style.formLabel}>
                     Address
                 </label>
-                {props.isEditMode === false ?
+                {props.isEditMode.address === false ?
                     <span className={style.userInfo}
-                          onClick={ props.onChangeEditMode}>
+                          onClick={ props.onChangeEditModeAddress}>
                        {props.userProfileData.address ? props.userProfileData.address : '---------'}
                     </span> :
                     <Field className={style.formTextInput}
@@ -72,8 +72,8 @@ let ProfileForm = (props) => {
 const mapStateToProps = (state) => {
     return {
         isNotNullToken:  state.auth.userAuthData.token !== null,
-        isEditMode:     state.profilePage.isEditMode,
-        initialValues:  state.profilePage.userProfileData,
+        isEditMode:      state.profilePage.isEditMode,
+        initialValues:   state.profilePage.userProfileData,
         userProfileData: state.profilePage.userProfileData
     }
 };
@@ -82,8 +82,14 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch)  => {
     return {
-        onChangeEditMode: () => {
-         dispatch(actionsProfile.setEditMode(true))
+        onChangeEditModeFullName: () => {
+           dispatch(actionsProfile.setEditModeFullName(true))
+        },
+        onChangeEditModePhoneNumber: () => {
+           dispatch(actionsProfile.setEditModePhoneNumber(true))
+        },
+        onChangeEditModeAddress: () => {
+           dispatch(actionsProfile.setEditModeAddress(true))
         }
     }
 };
