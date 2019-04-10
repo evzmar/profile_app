@@ -13,6 +13,7 @@ let AuthForm = (props) => {
                   AccountName
               </label>
               <Field className={style.formTextInput}
+                     placeholder="AccountName"
                      name="accountName"
                      component='input'
                      type="text"/>
@@ -22,6 +23,7 @@ let AuthForm = (props) => {
                   Password
               </label>
               <Field className={style.formTextInput}
+                     placeholder="Password"
                      name="password"
                      component='input'
                      type="password"/>

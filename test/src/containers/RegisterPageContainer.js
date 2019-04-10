@@ -19,24 +19,24 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onChangeEnteringUserAccountName: (userAccountName) => {
-            dispatch(actionsRegister.setEnteringUserAccountName(userAccountName))
-        },
-        onChangeEnteringUserEmail: (userEmail) => {
-            dispatch(actionsRegister.setEnteringUserEmail(userEmail))
-        },
-        onChangeEnteringUserPassword: (userPassword) => {
-            dispatch(actionsRegister.setEnteringUserPassword(userPassword))
-        },
-        onChangeEnteringRepeatedUserPassword: (userPassword) => {
-           dispatch(actionsRegister.setEnteringRepeatedPassword(userPassword))
-        },
-        onRegistrationFinishCommited: () => {
-            dispatch(registerUserAccount());
-            dispatch(actionsRegister.setEnteringUserAccountName(''));
-            dispatch(actionsRegister.setEnteringUserEmail(''));
-            dispatch(actionsRegister.setEnteringUserPassword(''));
-            dispatch(actionsRegister.setEnteringRepeatedPassword(''))
+        // onChangeEnteringUserAccountName: (userAccountName) => {
+        //     dispatch(actionsRegister.setEnteringUserAccountName(userAccountName))
+        // },
+        // onChangeEnteringUserEmail: (userEmail) => {
+        //     dispatch(actionsRegister.setEnteringUserEmail(userEmail))
+        // },
+        // onChangeEnteringUserPassword: (userPassword) => {
+        //     dispatch(actionsRegister.setEnteringUserPassword(userPassword))
+        // },
+        // onChangeEnteringRepeatedUserPassword: (userPassword) => {
+        //    dispatch(actionsRegister.setEnteringRepeatedPassword(userPassword))
+        // },
+        onRegistrationFinishCommited: (registerData) => {
+            dispatch(registerUserAccount(registerData));
+            // dispatch(actionsRegister.setEnteringUserAccountName(''));
+            // dispatch(actionsRegister.setEnteringUserEmail(''));
+            // dispatch(actionsRegister.setEnteringUserPassword(''));
+            // dispatch(actionsRegister.setEnteringRepeatedPassword(''))
         }
     }
 };

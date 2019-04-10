@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed5f8f62-86e6-492b-b5ff-9d03bb737232" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test/src/containers/RegisterForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/components/ProfilePage/ProfilePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/components/ProfilePage/ProfilePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/containers/ProfileForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/containers/ProfileForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/containers/ProfilePageContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/containers/ProfilePageContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/redux/modules/authRedux.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/redux/modules/authRedux.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/redux/modules/profileRedux.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/redux/modules/profileRedux.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/redux/modules/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/redux/modules/rootReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/src/components/RegisterPage/RegisterPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/components/RegisterPage/RegisterPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/src/components/RegisterPage/RegisterPage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/components/RegisterPage/RegisterPage.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/src/containers/AuthForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/containers/AuthForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/src/containers/RegisterPageContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/containers/RegisterPageContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/src/redux/modules/registerRedux.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/redux/modules/registerRedux.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,11 +33,35 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/src/components/RegisterPage/RegisterPage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/src/components/ProfilePage/ProfilePage.js">
+        <entry file="file://$PROJECT_DIR$/test/src/containers/RegisterForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+            <state relative-caret-position="391">
+              <caret line="65" column="37" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/src/containers/AuthForm.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="32" column="35" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="35" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -46,10 +70,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/src/containers/ProfilePageContainer.js">
+        <entry file="file://$PROJECT_DIR$/test/src/containers/RegisterPageContainer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="25" column="63" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
+            <state relative-caret-position="291">
+              <caret line="34" column="34" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -58,37 +82,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/src/containers/ProfileForm.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="73" column="64" lean-forward="true" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="64" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/src/redux/modules/authRedux.js">
+        <entry file="file://$PROJECT_DIR$/test/src/redux/modules/registerRedux.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="36" column="14" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="14" />
+              <caret line="107" column="69" lean-forward="true" selection-start-line="104" selection-start-column="3" selection-end-line="107" selection-end-column="69" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
-                <marker date="1554880336332" expanded="true" signature="1697:1935" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/src/redux/modules/rootReducer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="50" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -136,13 +135,8 @@
         <option value="$PROJECT_DIR$/test/package.json" />
         <option value="$PROJECT_DIR$/test/src/dal/axios-instance.js" />
         <option value="$PROJECT_DIR$/test/src/components/RegisterPage/RgisterPage.js" />
-        <option value="$PROJECT_DIR$/test/src/containers/RegisterPageContainer.js" />
         <option value="$PROJECT_DIR$/test/src/components/AuthPage/AuthPage.module.css" />
-        <option value="$PROJECT_DIR$/test/src/components/RegisterPage/RegisterPage.module.css" />
-        <option value="$PROJECT_DIR$/test/src/redux/modules/registerRedux.js" />
         <option value="$PROJECT_DIR$/test/src/App.js" />
-        <option value="$PROJECT_DIR$/test/src/containers/AuthForm.js" />
-        <option value="$PROJECT_DIR$/test/src/components/RegisterPage/RegisterPage.js" />
         <option value="$PROJECT_DIR$/test/src/components/ProfilePage/ProfilePage.module.css" />
         <option value="$PROJECT_DIR$/test/src/consts/consts.js" />
         <option value="$PROJECT_DIR$/test/src/containers/AuthPageContainer.js" />
@@ -154,6 +148,12 @@
         <option value="$PROJECT_DIR$/test/src/redux/modules/authRedux.js" />
         <option value="$PROJECT_DIR$/test/src/containers/ProfilePageContainer.js" />
         <option value="$PROJECT_DIR$/test/src/components/ProfilePage/ProfilePage.js" />
+        <option value="$PROJECT_DIR$/test/src/components/RegisterPage/RegisterPage.module.css" />
+        <option value="$PROJECT_DIR$/test/src/containers/AuthForm.js" />
+        <option value="$PROJECT_DIR$/test/src/components/RegisterPage/RegisterPage.js" />
+        <option value="$PROJECT_DIR$/test/src/containers/RegisterPageContainer.js" />
+        <option value="$PROJECT_DIR$/test/src/redux/modules/registerRedux.js" />
+        <option value="$PROJECT_DIR$/test/src/containers/RegisterForm.js" />
       </list>
     </option>
   </component>
@@ -208,22 +208,7 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="ProfilePage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="profile_app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="profile_app" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="RegisterPage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="profile_app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="profile_app" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="consts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="profile_app" type="b2602c69:ProjectViewProjectNode" />
@@ -313,12 +298,12 @@
       <workItem from="1554624666866" duration="5718000" />
       <workItem from="1554644072307" duration="3884000" />
       <workItem from="1554651807420" duration="6510000" />
-      <workItem from="1554701498982" duration="63780000" />
+      <workItem from="1554701498982" duration="66499000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103925000" />
+    <option name="totallyTimeSpent" value="106644000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -427,46 +412,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/src/containers/RegisterPageContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="44" lean-forward="true" selection-start-line="11" selection-end-line="44" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
           <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/src/components/RegisterPage/RegisterPage.module.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="26" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="17" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/src/components/ProfilePage/ProfilePage.module.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/src/redux/modules/registerRedux.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1088">
-          <caret line="27" column="18" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -485,46 +436,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="87">
           <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/src/containers/AuthForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="31" column="31" lean-forward="true" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/src/components/RegisterPage/RegisterPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="83" column="15" lean-forward="true" selection-start-line="83" selection-start-column="15" selection-end-line="83" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/src/components/AuthPage/AuthPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/src/redux/modules/profileRedux.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2414">
-          <caret line="142" column="2" lean-forward="true" selection-start-line="142" selection-start-column="2" selection-end-line="142" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -578,10 +489,94 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/src/components/ProfilePage/ProfilePage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+        <state relative-caret-position="444">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/components/ProfilePage/ProfilePage.module.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="82" column="20" lean-forward="true" selection-start-line="77" selection-start-column="4" selection-end-line="82" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/components/RegisterPage/RegisterPage.module.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="82" column="17" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/components/AuthPage/AuthPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="33" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="14" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/redux/modules/profileRedux.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2414">
+          <caret line="142" column="2" lean-forward="true" selection-start-line="142" selection-start-column="2" selection-end-line="142" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/containers/AuthForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="32" column="35" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/containers/RegisterPageContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="34" column="34" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/components/RegisterPage/RegisterPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/redux/modules/registerRedux.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="107" column="69" lean-forward="true" selection-start-line="104" selection-start-column="3" selection-end-line="107" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/containers/RegisterForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="65" column="37" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>

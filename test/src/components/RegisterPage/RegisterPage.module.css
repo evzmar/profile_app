@@ -70,3 +70,18 @@
     font-size: 1rem;
     color: brown;
 }
+
+.authButtonBlock{
+    display: block;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+}
+
+.authButton{
+    width: 10rem;
+    height: 2rem;
+    color: #378dcc;
+    font-family: "Arial Narrow";
+    font-size: 1.5rem;
+}

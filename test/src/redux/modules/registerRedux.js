@@ -101,16 +101,16 @@ export const reducer = (state = initialState, action) => {
 
 //--- thunkCreator -------//
 
-export const registerUserAccount = () => (dispatch, getState) => {
-    let globalState = getState();
-    let accountName = globalState.register.enteringData.userAccountName;
-    let email = globalState.register.enteringData.userEmail;
-    let password = globalState.register.enteringData.userPassword;
+export const registerUserAccount = (registerData) => (dispatch, getState) => {
+    // let globalState = getState();
+    // let accountName = globalState.register.enteringData.userAccountName;
+    // let email = globalState.register.enteringData.userEmail;
+    // let password = globalState.register.enteringData.userPassword;
 
     axios.post('/api/v1/users', {
-        userAccountName: accountName,
-        email:           email,
-        pass:            password
+        userAccountName: registerData.userAccountName,
+        email:           registerData.userEmail,
+        pass:            registerData.userPassword
     })
         .then((res) => {
             if (res.status === 201) {
