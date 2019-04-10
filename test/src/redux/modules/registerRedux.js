@@ -3,78 +3,36 @@ import {registerProcessResults, registerProcessStatuses} from "../../consts/cons
 
 
 export const types = {
-    SET_ENTERING_USER_ACCOUNT_NAME:        'APP/REGISTER_REDUX/SET_ENTERING_USER_ACCOUNT_NAME',
-    SET_ENTERING_USER_EMAIL:               'APP/REGISTER_REDUX/SET_ENTERING_USER_EMAIL',
-    SET_ENTERING_USER_PASSWORD:            'APP/REGISTER_REDUX/SET_ENTERING_USER_PASSWORD',
-    SET_ENTERING_REPEATED_USER_PASSWORD:   'APP/REGISTER_REDUX/SET_ENTERING_REPEATED_USER_PASSWORD',
-
     SET_REGISTERING_PROCESS_STATUS:        'APP/REGISTER_REDUX/SET_REGISTERING_PROCESS_STATUS',
     SET_REGISTERING_PROCESS_ERROR:         'APP/REGISTER_REDUX/SET_REGISTERING_PROCESS_ERROR',
+    SET_REGISTERING_PROCESS_ERROR_MESSAGE: 'APP/REGISTER_REDUX/SET_REGISTERING_PROCESS_ERROR_MESSAGE',
 
     SET_IS_AS_REGISTERED_FLAG:             'APP/REGISTER_REDUX/SET_IS_AS_REGISTERED_FLAG'
 };
 
 //----
 const initialState = {
-    enteringData:{
-        userAccountName: '',
-        userEmail: '',
-        userPassword: '',
-        repeatedUserPassword: ''
-    },
     registerStatus: registerProcessStatuses.READY,
     registerError:  registerProcessResults.SUCCESS,
+    registerErrorMessage: '',
 
     isAsRegistered: false
 };
 //---- actionCreators--------//
 export const actions = {
-    setEnteringUserAccountName:     (userAccountName)      => ({type: types.SET_ENTERING_USER_ACCOUNT_NAME, userAccountName}),
-    setEnteringUserEmail:           (userEmail)            => ({type: types.SET_ENTERING_USER_EMAIL,  userEmail}),
-    setEnteringUserPassword:        (userPassword)         => ({type: types.SET_ENTERING_USER_PASSWORD, userPassword}),
-    setEnteringRepeatedPassword:    (userPassword)         => ({type: types.SET_ENTERING_REPEATED_USER_PASSWORD, userPassword}),
+    setRegisterProcessStatus:           (registerStatus)       => ({type: types.SET_REGISTERING_PROCESS_STATUS,  registerStatus}),
+    setRegisterProcessError:            (registerError)        => ({type: types.SET_REGISTERING_PROCESS_ERROR, registerError}),
+    setRegisteringProcessErrorMessage:  (registerErrorMessage) => ({type: types.SET_REGISTERING_PROCESS_ERROR_MESSAGE, registerErrorMessage}),
 
-    setRegisterProcessStatus:       (registerStatus)       => ({type: types.SET_REGISTERING_PROCESS_STATUS,  registerStatus}),
-    setRegisterProcessError:        (registerError)        => ({type: types.SET_REGISTERING_PROCESS_ERROR, registerError}),
-
-    setIsAsRegisteredFlag:          (flag)                 => ({type: types.SET_IS_AS_REGISTERED_FLAG, flag})
+    setIsAsRegisteredFlag:              (flag)   => ({type: types.SET_IS_AS_REGISTERED_FLAG, flag})
 };
 
 //----
 export const reducer = (state = initialState, action) => {
 
-    let newState = {
-      ...state,
-        enteringData: {
-          ...state.enteringData
-        }
-    };
+    let newState = {...state};
 
     switch (action.type) {
-
-        case types.SET_ENTERING_USER_ACCOUNT_NAME:
-        {
-            newState.enteringData.userAccountName = action.userAccountName;
-            return newState
-        }
-
-        case types.SET_ENTERING_USER_EMAIL:
-        {
-            newState.enteringData.userEmail = action.userEmail;
-            return newState
-        }
-
-        case types.SET_ENTERING_USER_PASSWORD:
-        {
-            newState.enteringData.userPassword = action.userPassword;
-            return newState
-        }
-
-        case types.SET_ENTERING_REPEATED_USER_PASSWORD:
-        {
-            newState.enteringData.repeatedUserPassword = action.userPassword;
-            return newState
-        }
 
         case types.SET_REGISTERING_PROCESS_STATUS:
         {
@@ -94,6 +52,12 @@ export const reducer = (state = initialState, action) => {
             return newState
         }
 
+        case types.SET_REGISTERING_PROCESS_ERROR_MESSAGE:
+        {
+            newState.registerErrorMessage = action.registerErrorMessage;
+            return newState
+        }
+
         default:
             return state;
     }
@@ -102,10 +66,7 @@ export const reducer = (state = initialState, action) => {
 //--- thunkCreator -------//
 
 export const registerUserAccount = (registerData) => (dispatch, getState) => {
-    // let globalState = getState();
-    // let accountName = globalState.register.enteringData.userAccountName;
-    // let email = globalState.register.enteringData.userEmail;
-    // let password = globalState.register.enteringData.userPassword;
+    dispatch(actions.setRegisterProcessStatus(registerProcessStatuses.IN_PROGRESS));
 
     axios.post('/api/v1/users', {
         userAccountName: registerData.userAccountName,
@@ -119,7 +80,8 @@ export const registerUserAccount = (registerData) => (dispatch, getState) => {
                 dispatch(actions.setIsAsRegisteredFlag(true));
             } else if (res.status === 400){
                 dispatch(actions.setRegisterProcessStatus(registerProcessStatuses.READY));
-                dispatch(actions.setRegisterProcessError(registerProcessResults.COMMON_ERROR))
+                dispatch(actions.setRegisterProcessError(registerProcessResults.COMMON_ERROR));
+                dispatch(actions.setRegisteringProcessErrorMessage(res.data.error.userMessage[0]))
             }
         }).catch((e) => {
         console.log(e);

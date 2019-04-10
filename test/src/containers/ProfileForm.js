@@ -23,7 +23,8 @@ let ProfileForm = (props) => {
                     <Field className={style.formTextInput}
                            name="fullName"
                            component='input'
-                           type="text"/>
+                           type="text"
+                           initialValues={props.initialValues.fullName}/>
                 }
             </div>
             <div className={style.formBlock}>
@@ -38,7 +39,8 @@ let ProfileForm = (props) => {
                     <Field className={style.formTextInput}
                            name="phoneNumber"
                            component='input'
-                           type="text"/>
+                           type="text"
+                           initialValues={props.initialValues.phoneNumber}/>
                 }
             </div>
             <div className={style.formBlock}>
@@ -53,7 +55,8 @@ let ProfileForm = (props) => {
                     <Field className={style.formTextInput}
                            name="address"
                            component='input'
-                           type="text"/>
+                           type="text"
+                           initialValues={props.initialValues.address}/>
                 }
             </div>
             {props.isNotNullToken ?

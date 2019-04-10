@@ -46,14 +46,7 @@ let RegisterForm = (props) => {
                            {/*name="repeatedUserPassword"*/}
                            {/*component='input'*/}
                            {/*type="password"*/}
-                           {/*placeholder="Repeated password"*/}
-                           {/*value={props.enteringData.repeatedUserPassword}*/}
-                           {/*onChange={*/}
-                               {/*(e) => {*/}
-                                   {/*props.onChangeEnteringRepeatedUserPassword(e.currentTarget.value)*/}
-                               {/*}*/}
-                           {/*}*/}
-                    {/*/>*/}
+                           {/*placeholder="Repeated password"/>*/}
                     {/*{ (props.enteringData.repeatedUserPassword !== props.enteringData.userPassword) ?*/}
                         {/*<span className={style.errorMessage}>*/}
                          {/*введите верный верный*/}

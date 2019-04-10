@@ -1,9 +1,9 @@
 import React from 'react';
 import style from "./RegisterPage.module.css";
 import Redirect from "react-router-dom/es/Redirect";
-import Field from "redux-form/es/Field";
 import {NavLink} from "react-router-dom";
 import RegisterForm from "../../containers/RegisterForm";
+import {registerProcessResults} from "../../consts/consts";
 
 
 
@@ -30,8 +30,13 @@ const RegisterPage = (props) => {
              Регистрация
          </label>
          <RegisterForm onSubmit={submit} {...props}/>
+         {props.registerError === registerProcessResults.COMMON_ERROR ?
+             <div>
+                 ERROR
+             </div> : null}
      </div>
   )
 };
 
 export default RegisterPage;
+

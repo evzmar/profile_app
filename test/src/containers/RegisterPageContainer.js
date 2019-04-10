@@ -1,7 +1,7 @@
 import React from 'react';
 import RegisterPage from "../components/RegisterPage/RegisterPage";
 import connect from "react-redux/es/connect/connect";
-import {actions as actionsRegister, registerUserAccount} from "../redux/modules/registerRedux";
+import {registerUserAccount} from "../redux/modules/registerRedux";
 
 
 
@@ -19,24 +19,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        // onChangeEnteringUserAccountName: (userAccountName) => {
-        //     dispatch(actionsRegister.setEnteringUserAccountName(userAccountName))
-        // },
-        // onChangeEnteringUserEmail: (userEmail) => {
-        //     dispatch(actionsRegister.setEnteringUserEmail(userEmail))
-        // },
-        // onChangeEnteringUserPassword: (userPassword) => {
-        //     dispatch(actionsRegister.setEnteringUserPassword(userPassword))
-        // },
-        // onChangeEnteringRepeatedUserPassword: (userPassword) => {
-        //    dispatch(actionsRegister.setEnteringRepeatedPassword(userPassword))
-        // },
         onRegistrationFinishCommited: (registerData) => {
-            dispatch(registerUserAccount(registerData));
-            // dispatch(actionsRegister.setEnteringUserAccountName(''));
-            // dispatch(actionsRegister.setEnteringUserEmail(''));
-            // dispatch(actionsRegister.setEnteringUserPassword(''));
-            // dispatch(actionsRegister.setEnteringRepeatedPassword(''))
+            dispatch(registerUserAccount(registerData))
         }
     }
 };

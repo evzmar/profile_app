@@ -85,3 +85,14 @@
     font-family: "Arial Narrow";
     font-size: 1.5rem;
 }
+
+.blockRegisterError{
+    width: 10rem;
+    height: 5rem;
+    display: flex;
+    margin: auto;
+    font-family: "Arial Narrow";
+    font-size: 1.3rem;
+    background: brown;
+    color: white;
+}
