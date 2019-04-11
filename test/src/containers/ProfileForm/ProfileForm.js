@@ -1,8 +1,8 @@
 import React from 'react';
-import style from "../components/ProfilePage/ProfilePage.module.css";
+import style from './ProfileForm.module.css';
 import {Field, reduxForm} from "redux-form";
 import connect from "react-redux/es/connect/connect";
-import {actions as actionsProfile} from "../redux/modules/profileRedux";
+import {actions as actionsProfile} from "../../redux/modules/profileRedux";
 
 
 

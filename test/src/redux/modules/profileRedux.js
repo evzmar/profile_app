@@ -126,11 +126,15 @@ export const updateAuthUserProfileFromCreatingUserProfile = (userProfileData) =>
     let accountName = globalState.auth.userAuthData.userAccountName;
     let token = globalState.auth.userAuthData.token;
 
+    let newUserProfileData =  globalState.profilePage.userProfileData;
+
+    newUserProfileData = {...newUserProfileData, ...userProfileData};
+
     dispatch(actions.setUpdateUserProfileProcessStatus(profileProcessStatuses.IN_PROGRESS));
     axios.put('/api/v1/users/' + accountName, {
-            fullName: userProfileData.fullName,
-            phoneNumber: userProfileData.phoneNumber,
-            address: userProfileData.address
+            fullName: newUserProfileData.fullName,
+            phoneNumber: newUserProfileData.phoneNumber,
+            address: newUserProfileData.address
         },
         {
             headers: {

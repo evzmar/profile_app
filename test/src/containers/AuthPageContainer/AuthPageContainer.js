@@ -1,7 +1,7 @@
 import React from 'react';
 import connect from "react-redux/es/connect/connect";
-import AuthPage from "../components/AuthPage/AuthPage";
-import {authorizeUser} from "../redux/modules/authRedux";
+import AuthPage from "../../components/AuthPage/AuthPage";
+import {authorizeUser} from "../../redux/modules/authRedux";
 
 
 const  AuthPageContainer = (props) => {

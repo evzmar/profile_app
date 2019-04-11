@@ -1,12 +1,12 @@
 import React from 'react';
-import ProfilePage from "../components/ProfilePage/ProfilePage";
+import ProfilePage from "../../components/ProfilePage/ProfilePage";
 import connect from "react-redux/es/connect/connect";
 import {
     actions as actionsProfile,
     updateAuthUserProfileFromCreatingUserProfile,
     updateUserDataFromServer
-} from "../redux/modules/profileRedux";
-import {actions as actionsAuth, authorizeUser} from "../redux/modules/authRedux";
+} from "../../redux/modules/profileRedux";
+import {actions as actionsAuth, authorizeUser} from "../../redux/modules/authRedux";
 
 
 class ProfilePageContainer extends React.Component {

@@ -1,5 +1,5 @@
 import React from 'react';
-import style from "../components/AuthPage/AuthPage.module.css";
+import style from "./AuthForm.module.css";
 import Field from "redux-form/es/Field";
 import connect from "react-redux/es/connect/connect";
 import {reduxForm} from "redux-form";

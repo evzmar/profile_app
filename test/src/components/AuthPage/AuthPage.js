@@ -1,6 +1,6 @@
 import React from 'react';
 import style from "./AuthPage.module.css";
-import AuthForm from "../../containers/AuthForm";
+import AuthForm from "../../containers/AuthForm/AuthForm";
 import Redirect from "react-router-dom/es/Redirect";
 import {authProcessStatuses} from "../../consts/consts";
 

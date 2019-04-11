@@ -16,7 +16,8 @@ const initialState = {
     registerError:  registerProcessResults.SUCCESS,
     registerErrorMessage: '',
 
-    isAsRegistered: false
+    isAsRegistered: false,
+    isError:        false
 };
 //---- actionCreators--------//
 export const actions = {

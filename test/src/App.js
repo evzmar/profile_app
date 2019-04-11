@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import './App.css';
 import AuthPage from "./components/AuthPage/AuthPage";
 import {Route, Switch} from "react-router-dom";
-import ProfilePageContainer from "./containers/ProfilePageContainer";
-import RegisterPageContainer from "./containers/RegisterPageContainer";
-import AuthPageContainer from "./containers/AuthPageContainer";
+import ProfilePageContainer from "./containers/ProfilePageContainer/ProfilePageContainer";
+import RegisterPageContainer from "./containers/RegisterPageContainer/RegisterPageContainer";
+import AuthPageContainer from "./containers/AuthPageContainer/AuthPageContainer";
 
 
 

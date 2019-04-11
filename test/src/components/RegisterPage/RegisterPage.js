@@ -2,17 +2,14 @@ import React from 'react';
 import style from "./RegisterPage.module.css";
 import Redirect from "react-router-dom/es/Redirect";
 import {NavLink} from "react-router-dom";
-import RegisterForm from "../../containers/RegisterForm";
+import RegisterForm from "../../containers/RegisterForm/RegisterForm";
 import {registerProcessResults} from "../../consts/consts";
+import {SubmissionError} from "redux-form";
 
 
 
 const RegisterPage = (props) => {
-    //---------------------------
-    const submit = (values) => {
-        let registerData = values;
-        props.onRegistrationFinishCommited(registerData);
-    };
+
     //---------------------------
     //---
     if (props.isAsRegistered === true) {
@@ -29,11 +26,7 @@ const RegisterPage = (props) => {
          <label className={style.registerSectionLabel}>
              Регистрация
          </label>
-         <RegisterForm onSubmit={submit} {...props}/>
-         {props.registerError === registerProcessResults.COMMON_ERROR ?
-             <div>
-                 ERROR
-             </div> : null}
+         <RegisterForm />
      </div>
   )
 };

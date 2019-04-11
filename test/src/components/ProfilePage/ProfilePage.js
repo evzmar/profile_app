@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './ProfilePage.module.css';
-import ProfileForm from "../../containers/ProfileForm";
+import ProfileForm from "../../containers/ProfileForm/ProfileForm";
 import {Redirect} from "react-router-dom";
 
 

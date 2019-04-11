@@ -10,7 +10,6 @@ import {reducer as formReducer} from 'redux-form';
 const  rootReducer = combineReducers({
     register:           registerReducer,
     auth:               authReducer,
-    // loginPage:          loginPageReducer,
     profilePage:        profilePageReducer,
     form:               formReducer
 });
