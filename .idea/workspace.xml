@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ed5f8f62-86e6-492b-b5ff-9d03bb737232" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/src/containers/AuthForm/AuthForm.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/src/containers/ProfileForm/ProfileForm.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/src/containers/RegisterForm/RegisterForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/src/containers/RegisterForm/RegisterForm.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/components/AuthPage/AuthPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/components/AuthPage/AuthPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/components/AuthPage/AuthPage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/components/AuthPage/AuthPage.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/components/ProfilePage/ProfilePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/components/ProfilePage/ProfilePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/components/ProfilePage/ProfilePage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/components/ProfilePage/ProfilePage.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/components/RegisterPage/RegisterPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/components/RegisterPage/RegisterPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/components/RegisterPage/RegisterPage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/components/RegisterPage/RegisterPage.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/containers/AuthForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/containers/AuthForm/AuthForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/containers/AuthPageContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/containers/AuthPageContainer/AuthPageContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/containers/ProfileForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/containers/ProfileForm/ProfileForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/containers/ProfilePageContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/containers/ProfilePageContainer/ProfilePageContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/containers/RegisterForm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/containers/RegisterPageContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/containers/RegisterPageContainer/RegisterPageContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/redux/modules/profileRedux.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/redux/modules/profileRedux.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/redux/modules/registerRedux.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/redux/modules/registerRedux.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/redux/modules/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/redux/modules/rootReducer.js" afterDir="false" />
-    </list>
+    <list default="true" id="ed5f8f62-86e6-492b-b5ff-9d03bb737232" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -51,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/test/src/containers/RegisterForm/RegisterForm.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-814">
-              <caret line="43" column="33" lean-forward="true" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
+              <caret line="43" column="33" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
               <folding>
                 <element signature="e#0#61#0" expanded="true" />
               </folding>
@@ -245,16 +223,15 @@
       <workItem from="1554644072307" duration="3884000" />
       <workItem from="1554651807420" duration="6510000" />
       <workItem from="1554701498982" duration="79987000" />
-      <workItem from="1554911978859" duration="12235000" />
+      <workItem from="1554911978859" duration="12630000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132367000" />
+    <option name="totallyTimeSpent" value="132762000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20758928" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -530,7 +507,7 @@
     <entry file="file://$PROJECT_DIR$/test/src/containers/RegisterForm/RegisterForm.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-814">
-          <caret line="43" column="33" lean-forward="true" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
+          <caret line="43" column="33" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
           <folding>
             <element signature="e#0#61#0" expanded="true" />
           </folding>
