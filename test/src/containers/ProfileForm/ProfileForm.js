@@ -15,9 +15,7 @@ let ProfileForm = (props) => {
                 </label>
                 {props.isEditMode.fullName === false ?
                     <span className={style.userInfo}
-                          onClick={(e) => {
-                              props.onChangeEditModeFullName()}
-                          }>
+                          onClick={props.isNotNullToken && props.onChangeEditModeFullName}>
                        {props.userProfileData.fullName ? props.userProfileData.fullName : '---------'}
                     </span> :
                     <Field className={style.formTextInput}
@@ -49,7 +47,7 @@ let ProfileForm = (props) => {
                 </label>
                 {props.isEditMode.address === false ?
                     <span className={style.userInfo}
-                          onClick={ props.onChangeEditModeAddress}>
+                          onClick={props.isNotNullToken && props.onChangeEditModeAddress}>
                        {props.userProfileData.address ? props.userProfileData.address : '---------'}
                     </span> :
                     <Field className={style.formTextInput}

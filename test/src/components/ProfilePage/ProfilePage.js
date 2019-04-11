@@ -12,9 +12,9 @@ const ProfilePage = (props) => {
         props.onEditingUserDataEnteringFinishCommited(userProfileData);
     };
     //---------------------------
-    if ( !props.isNotNullToken){
-        return <Redirect to = '/auth'/>
-    }
+    // if ( !props.isNotNullToken){
+    //     return <Redirect to = '/auth'/>
+    // }
     //---
 
     return (

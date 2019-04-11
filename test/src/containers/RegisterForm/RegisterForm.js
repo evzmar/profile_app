@@ -94,10 +94,7 @@ let RegisterForm = (props) => {
     )
 };
 
-const mapStateToProps = (state) => {
-    return {
-    }
-};
+const mapStateToProps = (state) => {};
 
 
 const mapDispatchToProps = (dispatch)  => {
